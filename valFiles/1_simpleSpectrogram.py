@@ -2,26 +2,22 @@ import numpy as np
 import matplotlib.pyplot as plt
 import soundfile as sf
 import helpers as h
-################## functions for data processing
-
-
-
-
-
-###############################################
-
+"""
+ functions for data processing are in the helpers.py file
+"""
 specduration = 3   # make 3 second spectrograms
 Ntimes       = 256  # number of power spectra to calculate for the spectrogram
-Nfreqs       = 255
+Nfreqs       = 255  # will be 1 frequency bin less than spectrogram
+                    # this is because the bottom row contains the total psd in each time slice
 f_low = 200
 f_high = 10000
 logFrequency = True
 
-wavStartSecs  = 23    # index to move along wav file grabbing blocks of data for psds
+wavStartSecs  = 23    # time (s) to start along wav file grabbing blocks of data for psds
 
 
 wavfile = "../OS_9_27_2017_08_25_00__0002.wav"
-#wavfile = "../Monika_Track L.wav"
+
 with sf.SoundFile(wavfile) as f:
     blocksize = int(specduration * f.samplerate // Ntimes)  # this is one bin in the final spectrogram
     samplerate = f.samplerate
