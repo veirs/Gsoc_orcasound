@@ -11,3 +11,12 @@ numpy
 matplotlib
 soundfile
 
+1_simpleSpectrogram.py  shows how to calculate the individual psd elements and save
+them in an array of prescribed size.  Here 256 x 256 psd values between specified frequency
+limits and specified time limits.
+
+2_simpleSpectrogramDenoise.py  shows a very simple way to subtract background noise from
+a section of the wav file which does not have a call from the spectrogram of the call
+
+Sample plot:
+<img src="plots/simpleDenoise.jpg" alt="Sample plot" style="height: 100px; width:100px;"/>
