@@ -18,5 +18,7 @@ limits and specified time limits.
 2_simpleSpectrogramDenoise.py  shows a very simple way to subtract background noise from
 a section of the wav file which does not have a call from the spectrogram of the call
 
+3_Signal2NoiseSpectrogram.py shows a couple of simple ways to assess the signal to noise of call spectrograms
+
 Sample plot:
 ![Simple denoiser](plots/simpleDenoiser.jpg "Simple denoiser")
